@@ -29,6 +29,15 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # ------------------------------------------------------------------------------
 INSTALLED_APPS += ("djangosecure", )
 
+# third-party-apps
+# ------------------------------------------------------------------------------
+THIRD_PARTY_APPS = (
+    'south',  # Database migration helpers:
+    'crispy_forms',  # Form layouts
+    'avatar',  # for user avatars
+    'nupages',
+)
+
 MIDDLEWARE_CLASSES = (
     # Make sure djangosecure.middleware.SecurityMiddleware is listed first
     'djangosecure.middleware.SecurityMiddleware',

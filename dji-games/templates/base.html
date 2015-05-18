@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}dji-games{% endblock title %}</title>
+    <title>{% block title %}DJI Games{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Marketing website for DJI Games.">
+    <meta name="author" content="Zacharia Lorenz">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -14,57 +14,66 @@
     <![endif]-->
 
     {% block css %}
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-    <!-- Your stuff: Third-party css libraries go here -->
-
-    <!-- This file store project specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    {% endblock %}
+      <!-- Import Google Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+      <!-- Latest compiled and minified Bootstrap CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <!-- Project specific CSS -->
+      <link href="{% static 'css/project.css' %}" rel="stylesheet">
+      <link href="{% static 'css/theme.css' %}" rel="stylesheet">
+    {% endblock css %}
 
     {% block angular %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     {% endblock %}
-
   </head>
 
   <body>
-
-    <div class="header navbar">
+    <nav class="navbar navbar-default">
       <div class="container">
-        <a class="navbar-brand" href="/">dji-games</a>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="http://d333gi46xmu1md.cloudfront.net/assets/logo/lg/dji-logo-21cc33e7f0c86802ef0bedc701397eee.png"/>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'agenda' %}">Agenda</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">DJI Games</a></li>
+                <li><a href="#">The Rules</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Aeroclub</a></li>
+            <li><a href="#">Signup</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-          {% if request.user.is_authenticated %}
-            <li><a href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a></li>
-            <li><a href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
-          {% else %}
-            <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
-            <li><a href="{% url 'account_login' %}">{% trans "Log In" %}</a></li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+      {% endfor %}
+    {% endif %}
 
-    <div class="container">
-
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
-          {% endfor %}
-      {% endif %}
-
-      {% block content %}
+    {% block content %}
+      <div class="container">
         <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
-
-    </div> <!-- /container -->
+      </div><!--/ .container-->
+    {% endblock content %}
 
     {% block modal %}{% endblock modal %}
 
@@ -74,15 +83,10 @@
     {% block javascript %}
       <!-- Latest JQuery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-
-      <!-- place project specific Javascript in this file -->
+      <!-- Project specific Javascript -->
       <script src="{% static 'js/project.js' %}"></script>
     {% endblock javascript %}
   </body>
 </html>
- 

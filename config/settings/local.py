@@ -53,7 +53,18 @@ DEBUG_TOOLBAR_CONFIG = {
 
 # django-extensions
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ('django_extensions', )
+INSTALLED_APPS += ('django_extensions',
+                   'nupages',
+                   )
+
+# third-party-apps
+# ------------------------------------------------------------------------------
+THIRD_PARTY_APPS = (
+    'south',  # Database migration helpers:
+    'crispy_forms',  # Form layouts
+    'avatar',  # for user avatars
+    'nupages',
+)
 
 # TESTING
 # ------------------------------------------------------------------------------

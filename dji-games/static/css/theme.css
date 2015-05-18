@@ -1,0 +1,101 @@
+/* --------------------
+Theme Name: DJI Games
+Theme URI: http://games.dji.com
+Description: Official theme for the DJI Games marketing website
+-------------------- */
+
+/*  COLORS
+    Primary:    #006eb9; Blue
+    Secondary:  #000000;
+    Success:    #00a3ef; Green
+    Info:       #000000; Light Blue
+    Warning:    #000000; Yellow
+    Danger:     #ffc708; Red
+*/
+
+/* ------------------------------------ */
+/* --------------- BASE --------------- */
+/* ------------------------------------ */
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* --- Typography
+/* --------------------------------------- */
+.section-title { margin-bottom: 25px; }
+
+/* --------------------------------------- */
+/* --------------- NAVBARS --------------- */
+/* --------------------------------------- */
+
+.navbar-default {
+  border: none;
+  border-radius: 0;
+  background-color: #333;
+}
+.navbar-default .navbar-brand {
+  color:#fff;
+  padding: 10px 15px;
+}
+.navbar-default .navbar-brand img { max-width: 68px; }
+.navbar-default .navbar-nav > li > a {
+  color:#fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  color: #ccc;
+  background-color: #242424;
+}
+.navbar-default .dropdown-menu {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: #2b2b2b;
+}
+.navbar-default .dropdown-menu > li > a {
+  padding: 10px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  background-color: transparent;
+}
+.navbar-default .dropdown-menu > li > a:hover,
+.navbar-default .dropdown-menu > li > a:focus,
+.navbar-default .dropdown-menu > .open > a,
+.navbar-default .dropdown-menu > .open > a:focus,
+.navbar-default .dropdown-menu > .open > a:hover {
+  color: #fff;
+  background-color: #006eb9;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* --------------------------------------------- */
+/* --------------- PAGE SECTIONS --------------- */
+/* --------------------------------------------- */
+
+/* --- HOMEPAGE, Welcome
+/* --------------------------------------- */
+.welcome { padding: 40px 0; }
+
+/* --- HOMEPAGE, Overview
+/* --------------------------------------- */
+.overview { padding: 40px 0; }
+
+/* --- HOMEPAGE, Signup
+/* --------------------------------------- */
+.signup {
+  padding: 40px 0;
+  text-align: center;
+}
