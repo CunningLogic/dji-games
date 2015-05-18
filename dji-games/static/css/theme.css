@@ -21,10 +21,24 @@ body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
+/* --- Video Embeds --- */
+.embed-responsive {
+  -moz-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
+  box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
+}
 
 /* --- Typography
 /* --------------------------------------- */
 .section-title { margin-bottom: 25px; }
+
+/* --- Forms
+/* --------------------------------------- */
+.form-control:focus {
+  border-color: #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
 
 /* --------------------------------------- */
 /* --------------- NAVBARS --------------- */
@@ -34,12 +48,13 @@ body {
   border: none;
   border-radius: 0;
   background-color: #333;
+  margin-bottom: 0;
 }
 .navbar-default .navbar-brand {
   color:#fff;
   padding: 10px 15px;
 }
-.navbar-default .navbar-brand img { max-width: 68px; }
+.navbar-default .navbar-brand img { max-height: 38px; }
 .navbar-default .navbar-nav > li > a {
   color:#fff;
   font-size: 14px;
@@ -87,7 +102,22 @@ body {
 
 /* --- HOMEPAGE, Welcome
 /* --------------------------------------- */
-.welcome { padding: 40px 0; }
+.welcome {
+  padding: 60px 0 40px;
+  background: #c9daee url(https://s3-us-west-2.amazonaws.com/dji-games/images/dji-games-pyramid.png) no-repeat right;
+  background-size: 62%;
+  background-position-x: 116%;
+}
+.welcome .video-embed { margin-left: -30px; }
+.welcome .title {
+  font-weight: 600;
+  font-size: 38px;
+}
+.welcome .title span {
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 20px;
+}
 
 /* --- HOMEPAGE, Overview
 /* --------------------------------------- */
