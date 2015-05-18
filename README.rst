@@ -1,7 +1,7 @@
-dji-games
+DJI Games
 ==============================
 
-Marketing website for DJI Games
+Basic marketing website for DJI Games
 
 
 LICENSE: BSD
