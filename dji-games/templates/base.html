@@ -14,8 +14,9 @@
     <![endif]-->
 
     {% block css %}
-      <!-- Import Google Fonts -->
+      <!-- Third-Party Fonts -->
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <!-- Latest compiled and minified Bootstrap CSS -->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
       <!-- Project specific CSS -->
@@ -51,7 +52,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">DJI Games</a></li>
+                <li><a href="#">The Games</a></li>
                 <li><a href="#">The Rules</a></li>
                 <li><a href="#">FAQs</a></li>
               </ul>
@@ -74,6 +75,28 @@
         <p>Use this document as a way to quick start any new project.</p>
       </div><!--/ .container-->
     {% endblock content %}
+
+    {% block footer %}
+      <!-- FOOTER
+      ================================================== -->
+      <section class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 social-icons">
+              <a href="http://facebook.com"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.twitter.com/djiglobal"><i class="fa fa-twitter"></i></a>
+              <a href="http://instagram.com"><i class="fa fa-instagram"></i></a>
+              <a href="http://youtube.com"><i class="fa fa-youtube"></i></a>
+            </div><!--/ .social-icons-->
+            <div class="col-xs-12 copyright">
+              <p>Copyright © 2015 <a href="http://dji.com">DJI</a> All Rights Reserved.</p>
+            </div><!--/ .copyright-->
+          </div><!--/ .row-->
+        </div><!--/ .container-->
+      </section>
+      <!-- FOOTER
+      ================================================== -->
+    {% endblock footer %}
 
     {% block modal %}{% endblock modal %}
 
