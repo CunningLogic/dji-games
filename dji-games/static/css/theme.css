@@ -16,13 +16,13 @@ Description: Official theme for the DJI Games marketing website
 /* ------------------------------------ */
 /* --------------- BASE --------------- */
 /* ------------------------------------ */
-
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 /* --- Video Embeds --- */
 .embed-responsive {
+  /* Box Shadows */
   -moz-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
   -webkit-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
   box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
@@ -37,26 +37,56 @@ body {
   letter-spacing: 2px;
 }
 
+/* --- Links & Buttons
+/* --------------------------------------- */
+a {
+  /* Transitions */
+  -webkit-transition: background-color 0.15s ease, color 0.15s ease;
+  -moz-transition: background-color 0.15s ease, color 0.15s ease;
+  -o-transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn {
+  border: none;
+  border-radius: 3px;
+  /* Transitions */
+  -webkit-transition: background-color 0.15s ease;
+  -moz-transition: background-color 0.15s ease;
+  -o-transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease;
+}
+.btn-default {
+  border: 1px solid #99c4e4;
+  color: #fff;
+  background-color: transparent;
+}
+
 /* --- Forms
 /* --------------------------------------- */
 .form-control {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 #000;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 #000;
-  -webkit-transition: box-shadow .2s ease;
-  -moz-transition: box-shadow .2s ease;
-  -o-transition: box-shadow .2s ease;
-  transition: box-shadow .2s ease;
+  border: none;
+  border-radius: 3px;
+  /* Box Shadows */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 transparent;
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 transparent;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 transparent;
+  /* Transitions */
+  -webkit-transition: box-shadow 0.15s ease;
+  -moz-transition: box-shadow 0.15s ease;
+  -o-transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease;
 }
 .form-control:focus {
   border-color: #ccc;
-  -webkit-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.25), 2px 0 8px rgba(0,0,0,0.1);
-  box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.25) 2px 0 8px rgba(0,0,0,0.1);
+  /* Box Shadows */
+  -webkit-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3), 2px 0 8px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3), 2px 0 8px rgba(0,0,0,0.15);
+  box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3) 2px 0 8px rgba(0,0,0,0.15);
 }
 
 /* --------------------------------------- */
 /* --------------- NAVBARS --------------- */
 /* --------------------------------------- */
-
 .navbar-default {
   border: none;
   border-radius: 0;
@@ -134,14 +164,65 @@ body {
 
 /* --- HOMEPAGE, Overview
 /* --------------------------------------- */
-.overview { padding: 50px 0 70px; }
+.overview { padding: 50px 0; }
 
 /* --- HOMEPAGE, Agenda At-A-Glance
 /* --------------------------------------- */
 .agenda-glance {
   padding: 40px 0;
-  background-color: #333;
   color: #fff;
+  background: #333 url(https://s3-us-west-2.amazonaws.com/dji-games/images/dji-phantom-3.jpg) no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+/* --- Timeline Schedule --- */
+.agenda-glance .nav-tabs { border-bottom: none; }
+.agenda-glance .nav-tabs > li > a {
+  border: 1px solid #99c4e4;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 3px;
+
+}
+.agenda-glance .nav-tabs > li > a:hover,
+.agenda-glance .nav-tabs > li > a:focus { background-color: rgba(255,255,255,0.25); }
+.agenda-glance .nav-tabs > li.active > a,
+.agenda-glance .nav-tabs > li.active > a:focus,
+.agenda-glance .nav-tabs > li.active > a:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #555;
+  border: 1px solid #99c4e4;
+}
+.event-days { margin-top: 30px; }
+.agenda-glance .tab-content { margin-top: 50px; }
+.time-item,
+.event-item { height: 70px; }
+.event-item > p,
+.time-item > p {
+  font-size: 16px;
+  margin-top: -3px;
+}
+.time-item {
+  text-align: right;
+  padding-right: 25px;
+}
+.event-item {
+  border-left: 2px solid #888;
+  margin-left: -1px;
+  padding-left: 24px;
+  font-weight: 300;
+}
+.event-item:last-child { border-color: transparent; }
+.event-item:before {
+  content: " ";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  background-image: url(https://s3-us-west-2.amazonaws.com/dji-games/images/phantom-icon.png);
+  background-size: contain;
+  left: -19px;
+  top: -9px;
 }
 
 /* --- HOMEPAGE, Game Rules
@@ -189,10 +270,11 @@ body {
   padding: 10px;
   border-radius: 50%;
   margin: 0 15px;
-  -webkit-transition: background-color .2s ease;
-  -moz-transition: background-color .2s ease;
-  -o-transition: background-color .2s ease;
-  transition: background-color .2s ease;
+  /* Transitions */
+  -webkit-transition: background-color 0.15s ease;
+  -moz-transition: background-color 0.15s ease;
+  -o-transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease;
 }
 .social-icons .fa-facebook:hover { background-color: #3b5998; }
 .social-icons .fa-twitter:hover { background-color: #33ccff; }
