@@ -27,6 +27,16 @@ body {
   -webkit-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
   box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
 }
+/* --- Header Rows --- */
+hr.light {
+  border: none;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background: linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+}
 
 /* --- Typography
 /* --------------------------------------- */
@@ -55,6 +65,12 @@ a {
   -o-transition: background-color 0.15s ease;
   transition: background-color 0.15s ease;
 }
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus { outline: none; }
 .btn-default {
   border: 1px solid #99c4e4;
   color: #fff;
@@ -79,9 +95,9 @@ a {
 .form-control:focus {
   border-color: #ccc;
   /* Box Shadows */
-  -webkit-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3), 2px 0 8px rgba(0,0,0,0.15);
-  -moz-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3), 2px 0 8px rgba(0,0,0,0.15);
-  box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.3) 2px 0 8px rgba(0,0,0,0.15);
+  -webkit-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.5), 2px 0 8px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.5), 2px 0 8px rgba(0,0,0,0.35);
+  box-shadow: inset 0 0 #000, 1px 2px 5px rgba(0,0,0,0.5) 2px 0 8px rgba(0,0,0,0.35);
 }
 
 /* --------------------------------------- */
@@ -182,7 +198,6 @@ a {
   color: #fff;
   background-color: transparent;
   border-radius: 3px;
-
 }
 .agenda-glance .nav-tabs > li > a:hover,
 .agenda-glance .nav-tabs > li > a:focus { background-color: rgba(255,255,255,0.25); }
@@ -228,12 +243,13 @@ a {
 /* --- HOMEPAGE, Game Rules
 /* --------------------------------------- */
 .rules { padding: 40px 0 60px; }
-.course-item {
+.list-item p,
+.tabbed p { margin-bottom: 5px; }
+.list-item {
   padding: 0 15px;
   margin-bottom: 20px;
 }
-.course-item p { margin-bottom: 5px; }
-.penalties {
+.tabbed {
   margin-top: 15px;
   padding: 0 15px;
 }
@@ -242,10 +258,18 @@ a {
 /* --------------------------------------- */
 .signup {
   color: #fff;
-  padding: 50px 0 70px;
-  text-align: center;
-  background: url(http://d333gi46xmu1md.cloudfront.net/assets/inspire-1/inspire2bg-de2593520f704c8ddf9ad0fbd144862f.jpg) no-repeat;
+  background: url(https://s3-us-west-2.amazonaws.com/dji-games/images/ty-phantom-3.jpg) no-repeat;
   background-size: cover;
+}
+.signup .dark-overlay {
+  background-color: rgba(0,0,0,0.07);
+  padding: 120px 0 140px;
+}
+.signup .section-title,
+.signup .btn { margin-left: -10px; }
+.signup .form-group {
+  padding: 0 5px;
+  margin-bottom: 10px;
 }
 
 /* -------------------------------------- */
@@ -257,9 +281,22 @@ a {
   background-color: #333;
   color: #fff;
 }
-.footer .copyright {
+.copyright .footer-logo,
+.copyright p { display: inline; }
+.copyright {
   color: #999;
-  margin-top: 30px;
+  margin-top: 50px;
+}
+.footer-logo { margin-right: 15px; }
+.sponsors .sponsor-item {
+  float: left;
+  text-align: center;
+  padding: 0 15px;
+  width: 33.333333333%;
+}
+.sponsors img {
+  display: inline;
+  max-height: 50px;
 }
 /* --- Social Icons --- */
 .social-icons i {
