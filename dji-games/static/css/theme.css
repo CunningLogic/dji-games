@@ -20,12 +20,19 @@ body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
-/* --- Video Embeds --- */
-.embed-responsive {
+/* --- iFrame Embeds --- */
+.video-embed-item {
   /* Box Shadows */
   -moz-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
   -webkit-box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
   box-shadow: 2px 1px 10px 0 rgba(0,0,0,0.2), 1px 4px 8px 1px rgba(0,0,0,0.5);
+}
+.map-embed-item {
+  border: 3px solid #fff;
+  /* Box Shadows */
+  -moz-box-shadow: 2px 1px 8px 0 rgba(0,0,0,0.15), 1px 3px 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 2px 1px 8px 0 rgba(0,0,0,0.15), 1px 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 2px 1px 8px 0 rgba(0,0,0,0.15), 1px 3px 6px rgba(0,0,0,0.3);
 }
 /* --- Header Rows --- */
 hr.light {
@@ -76,6 +83,8 @@ a {
   color: #fff;
   background-color: transparent;
 }
+.btn-danger { background-color: #e50011; }
+.btn-danger:hover { background-color: #c1000e; }
 
 /* --- Forms
 /* --------------------------------------- */
@@ -181,6 +190,10 @@ a {
 /* --- HOMEPAGE, Overview
 /* --------------------------------------- */
 .overview { padding: 50px 0; }
+.btn-signup {
+  margin-top: 50px;
+  padding: 16px 16px;
+}
 
 /* --- HOMEPAGE, Agenda At-A-Glance
 /* --------------------------------------- */
@@ -271,6 +284,18 @@ a {
   padding: 0 5px;
   margin-bottom: 10px;
 }
+
+/* --- HOMEPAGE, Contact
+/* --------------------------------------- */
+.contact {
+  padding: 60px 0;
+  background-color: #eee;
+}
+.contact .section-title-2 { margin-bottom: 25px; }
+.contact p { font-size: 16px; }
+.contact .contact-item { font-weight: 700; }
+/* --- Google Maps Embed --- */
+
 
 /* -------------------------------------- */
 /* --------------- FOOTER --------------- */
