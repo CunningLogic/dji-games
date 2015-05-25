@@ -17,8 +17,12 @@ Description: Official theme for the DJI Games marketing website
 /* --------------- BASE --------------- */
 /* ------------------------------------ */
 body {
+  margin-top: 60px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  body { margin-top: 50px; }
 }
 /* --- iFrame Embeds --- */
 .video-embed-item {
@@ -63,7 +67,8 @@ a {
   -o-transition: background-color 0.15s ease, color 0.15s ease;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
-.btn {
+.btn,
+button {
   border: none;
   border-radius: 3px;
   /* Transitions */
@@ -157,11 +162,22 @@ a {
   color: #fff;
   background-color: #006eb9;
 }
+.navbar-default .navbar-collapse {
+  border-color: #444;
+  box-shadow: none;
+}
+.navbar-default .navbar-toggle { border-color: transparent; }
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover { background-color: #2b2b2b; }
+.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
 @media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+@media (max-width: 768px) {
+  .navbar-default .navbar-brand img { max-height: 30px; }
 }
 
 /* --------------------------------------------- */
@@ -176,7 +192,8 @@ a {
   background-size: 62%;
   background-position-x: 116%;
 }
-.welcome .video-embed { margin-left: -30px; }
+.welcome .video-embed,
+.welcome .title { margin-left: -30px; }
 .welcome .title {
   font-weight: 600;
   font-size: 38px;
@@ -186,6 +203,30 @@ a {
   font-weight: 400;
   padding-left: 20px;
 }
+@media (max-width: 1199px) {
+  .welcome .video-embed,
+  .welcome .title { margin-left: -20px; }
+  .welcome .title span {
+    padding-left: 0;
+    margin-top: 10px;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .welcome {
+    padding: 220px 0 40px;
+    background-size: 400px;
+    background-position-y: -100px;
+    background-position-x: center;
+  }
+  .welcome .video-embed,
+  .welcome .title {
+    font-size: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .welcome .title span { font-size: 24px; }
+}
 
 /* --- HOMEPAGE, Overview
 /* --------------------------------------- */
@@ -193,6 +234,9 @@ a {
 .btn-signup {
   margin-top: 50px;
   padding: 16px 16px;
+}
+@media (max-width: 767px) {
+  .btn-signup { margin-top: 30px; }
 }
 
 /* --- HOMEPAGE, Agenda At-A-Glance
@@ -252,6 +296,9 @@ a {
   left: -19px;
   top: -9px;
 }
+@media (max-width: 767px) {
+  .time-item > p, .event-item > p { font-size: 14px; }
+}
 
 /* --- HOMEPAGE, Game Rules
 /* --------------------------------------- */
@@ -265,6 +312,9 @@ a {
 .tabbed {
   margin-top: 15px;
   padding: 0 15px;
+}
+@media (max-width: 767px) {
+  .rules .list-item .img-responsive { margin: 30px 0 15px; }
 }
 
 /* --- HOMEPAGE, Signup
@@ -284,6 +334,22 @@ a {
   padding: 0 5px;
   margin-bottom: 10px;
 }
+@media (max-width: 1199px) {
+  .signup .dark-overlay { padding: 100px 0 110px; }
+}
+@media (max-width: 991px) {
+  .signup .dark-overlay { padding: 50px 0 60px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .signup .section-title h2 { font-size: 22px; }
+}
+@media (max-width: 767px) {
+  .signup { text-align: center; }
+  .signup .dark-overlay { padding: 40px 0 70px; }
+  .signup .section-title,
+  .signup .btn { margin-left: 0; }
+  .signup .form-group { padding: 0 15px; }
+}
 
 /* --- HOMEPAGE, Contact
 /* --------------------------------------- */
@@ -292,9 +358,19 @@ a {
   background-color: #eee;
 }
 .contact .section-title-2 { margin-bottom: 25px; }
-.contact p { font-size: 16px; }
 .contact .contact-item { font-weight: 700; }
-/* --- Google Maps Embed --- */
+.contact p { font-size: 16px; }
+@media (min-width: 768px) and (max-width: 991px) {
+  .map-embed-item {
+    height: 380px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .contact { padding: 30px 0 50px; }
+  .contact .contact-item { margin-bottom: 5px; }
+  .contact p { margin-bottom: 15px; }
+}
 
 
 /* -------------------------------------- */
@@ -342,3 +418,6 @@ a {
 .social-icons .fa-twitter:hover { background-color: #33ccff; }
 .social-icons .fa-instagram:hover { background-color: #3f729b; }
 .social-icons .fa-youtube:hover { background-color: #b72d24; }
+@media (max-width: 767px) {
+  .sponsors { margin-top: 40px; }
+}

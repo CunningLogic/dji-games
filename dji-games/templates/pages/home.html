@@ -6,9 +6,9 @@
   <section class="welcome" id="welcome">
     <div class="container">
       <div class="row">
-        <div class="col-md-7 col-sm-8 video-embed">
+        <div class="col-md-7 col-sm-8">
           <!-- 16:9 iframe embed -->
-          <div class="embed-responsive embed-responsive-16by9 video-embed-item">
+          <div class="embed-responsive embed-responsive-16by9 video-embed video-embed-item">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Jvvx-Uo-YRc" frameborder="0" allowfullscreen></iframe>
           </div><!--/ .embed-responsive-->
           <h1 class="title">Spitzerberg, Austria <span>June 20-21, 2015</span></h1>
@@ -30,8 +30,8 @@
         <div class="col-sm-8 section-title">
           <h3 style="font-weight: 300; line-height: 1.3;">Come compete in the only dedicated aerial skill test for pilots like you. Special prizes from DJI. Exclusive obstacle course near Vienna. A chance to prove your skill. Hundreds of ready-to-fly Phantoms await but space is limited, so pre-register today! Stay tuned for more details.</h3>
         </div><!--/ .col-xs-12-->
-        <div class="col-sm-3 col-sm-offset-1">
-          <a class="btn btn-lg btn-block btn-danger btn-signup">Signup Today</a>
+        <div class="col-sm-3 col-xs-10">
+          <a href="#signup" class="btn btn-lg btn-block btn-danger btn-signup">Signup Today</a>
         </div>
       </div><!--/ .row-->
     </div><!--/ .container-->
@@ -140,36 +140,39 @@
           <h3>The Course</h3>
           <p>This DJI-designed course has several options and ways for you to earn points. Each participant will have their own course, and these maneuvers can be completed in any order, depending on your preference:</p>
           <div class="row list-item">
-            <div class="col-sm-8">
+            <div class="col-sm-4 col-sm-push-8 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/pyramid.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-8 col-sm-pull-4">
               <h4><strong>DJI Pyramid | 10-20 Points</strong></h4>
               <p>Use the landing gear on the DJI Phantom to pick up the Pyramid, then place it down on the nearby bulls-eye. Where the Pyramid is placed determines your earned points. With 10, 15, or 20 points up for grabs, this is your biggest single opportunity to earn the most points.</p>
               <p><em>The Pyramid can only be used once per participant per run.</em></p>
             </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/pyramid.png"/>
-            </div>
           </div><!--/ .list-item-->
           <div class="row list-item">
-            <div class="col-sm-9 col-sm-push-3">
+            <div class="col-sm-3 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/landing-pad.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-9">
               <h4><strong>Landing Pads | 2-5 Points</strong></h4>
               <p>Land your Phantom on each landing pad and stop on the ground for 1 second. Where you land your Phantom determines the number of points earned – either 5 points for the center, or 2 points for the edge.</p>
               <p><em>Each landing pad can only be used once per participant per run.</em></p>
             </div>
-            <div class="col-sm-3 col-sm-pull-9">
-              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/landing-pad.png"/>
-            </div>
           </div><!--/ .list-item-->
           <div class="row list-item">
-            <div class="col-sm-8">
+            <div class="col-sm-4 col-sm-push-8 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/figure-8.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-8 col-sm-pull-4">
               <h4><strong>Figure-8 | 4 Points</strong></h4>
               <p>Complete a figure-8 motion around the two pylons in the center of the course. Each completed figure-8 earns you 4 points.</p>
               <p><em>Figure 8s can be completed an unlimited number of times during each run.</em></p>
               <h4 style="margin-top: 20px;"><strong>Loops | 2 Points</strong></h4>
               <p>Fly through the raised loop on top of each pylon to earn 2 points.</p>
               <p><em>Each loop can only be used twice per participant per run.</em></p>
-            </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/figure-8.png"/>
             </div>
           </div><!--/ .list-item-->
           <h3 style="margin-top: 30px;">Time Limit</h3>
@@ -206,18 +209,18 @@
           <!-- --- Signup Form --- -->
           <form>
             <div class="row">
-              <div class="form-group col-md-2">
+              <div class="form-group col-lg-2 col-sm-3">
                 <input type="text" class="form-control" id="FirstName" placeholder="First Name">
               </div><!--/ .form-group-->
-              <div class="form-group col-md-2">
+              <div class="form-group col-lg-2 col-sm-3">
                 <input type="text" class="form-control" id="LastName" placeholder="Last Name">
               </div><!--/ .form-group-->
             </div><!--/ .row-->
             <div class="row">
-              <div class="form-group col-md-2">
+              <div class="form-group col-lg-2 col-sm-3">
                 <input type="text" class="form-control" id="City" placeholder="City">
               </div><!--/ .form-group-->
-              <div class="form-group col-md-2">
+              <div class="form-group col-lg-2 col-sm-3">
                 <select class="form-control" id="Country" placeholder="Country">
                   <option value="">Country</option>
                   <option value="10">Austria</option>
@@ -428,16 +431,16 @@
               </div><!--/ .form-group-->
             </div><!--/ .row-->
             <div class="row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-lg-4 col-sm-6">
                 <input type="email" class="form-control" id="Email" placeholder="Email Address">
               </div><!--/ .form-group-->
             </div><!--/ .row-->
             <div class="row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-lg-4 col-sm-6">
                 <input type="text" class="form-control" id="AerialSystem" placeholder="Current Aerial System...">
               </div><!--/ .form-group-->
               <div class="clearfix"></div>
-              <div class="col-md-2">
+              <div class="col-lg-2 col-sm-3">
                 <button type="submit" class="btn btn-block btn-primary">Submit</button>
               </div>
             </div><!--/ .row-->
@@ -454,7 +457,7 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <div class="section-title-2">
             <h2>Contact</h2>
           </div>
@@ -475,8 +478,12 @@
           <div class="col-md-8">
             <p><a href="tel:+432165622490">+43 2165-622490</a></p>
           </div>
+          <div class="col-md-4"><p class="contact-item">AGP Email:</p></div>
+          <div class="col-md-8">
+            <p><a href="mailto:aerialgp@gmail.com">aerialgp@gmail.com</a></p>
+          </div>
         </div><!--/ .col-md-6-->
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <!-- 16:9 iframe embed -->
           <div class="embed-responsive embed-responsive-16by9 map-embed-item">
             <iframe class="embed-responsive-item" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Spitzerberg%201%202405%20Hundsheim%2C%20Austria&key=AIzaSyBp1MgLfTuunv4Ntba3G_oaPxawTu06oUA"></iframe>
