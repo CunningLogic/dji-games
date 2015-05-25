@@ -11,6 +11,8 @@ Settings
 
 dji-games relies extensively on environment settings which **will not work with Apache/mod_wsgi setups**. It has been deployed successfully with both Gunicorn/Nginx and even uWSGI/Nginx.
 
+Additional documentation can be found in the original project repo: https://github.com/goldhand/django-nupages
+
 For configuration purposes, the following table maps the 'dji-games' environment variables to their Django setting:
 
 ======================================= =========================== ============================================== ===========================================
