@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles i18n %}
+
+{% block content %}
+  <!-- SOCIAL FEED
+  ================================================== -->
+  <section class="social" id="social">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
+          <link href="//assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+          <ul class="juicer-feed" data-feed-id="dji-games"><h1 class="referral"><a href="http://www.juicer.io" style="display:none;">Powered by Juicer</a></h1></ul>
+        </div>
+      </div><!--/ .row-->
+    </div><!--/ .container-fluid-->
+  </section>
+  <!--/ SOCIAL FEED
+  ================================================== -->
+{% endblock content %}
