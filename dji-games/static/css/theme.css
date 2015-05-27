@@ -88,6 +88,8 @@ button {
   color: #fff;
   background-color: transparent;
 }
+.btn-primary { background-color: #006eb9; }
+.btn-primary:hover { background-color: #005995; }
 .btn-danger { background-color: #e50011; }
 .btn-danger:hover { background-color: #c1000e; }
 
@@ -140,6 +142,15 @@ button {
 .navbar-default .navbar-nav > .open > a:hover {
   color: #ccc;
   background-color: #242424;
+}
+.navbar-default .navbar-nav > li > a.highlighted { background-color: #006eb9; }
+.navbar-default .navbar-nav > li > a.highlighted:hover,
+.navbar-default .navbar-nav > li > a.highlighted:focus,
+.navbar-default .navbar-nav > .open > a.highlighted,
+.navbar-default .navbar-nav > .open > a.highlighted:focus,
+.navbar-default .navbar-nav > .open > a.highlighted:hover {
+  color: #fff;
+  background-color: #005995;
 }
 .navbar-default .dropdown-menu {
   padding: 0;
