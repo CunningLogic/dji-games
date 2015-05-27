@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
+    url(r'^games/$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^agenda/$', TemplateView.as_view(template_name='pages/agenda.html'), name="agenda"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
     url(r'^social/$', TemplateView.as_view(template_name='pages/social.html'), name="social"),
