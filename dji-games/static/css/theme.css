@@ -51,6 +51,7 @@ hr.light {
 
 /* --- Typography
 /* --------------------------------------- */
+h5 {font-size: 16px; }
 .section-title { margin-bottom: 25px; }
 .section-title-2 h2 {
   text-transform: uppercase;
@@ -381,6 +382,33 @@ button {
   .contact { padding: 30px 0 50px; }
   .contact .contact-item { margin-bottom: 5px; }
   .contact p { margin-bottom: 15px; }
+}
+
+/* --- HOTELS
+/* --------------------------------------- */
+.hotels {
+  padding: 60px 0;
+}
+.hotel-item {
+  padding: 20px;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.hotel-thumb {
+  float: left;
+  padding-right: 20px;
+  max-width: 100px;
+}
+.hotel-title { margin-top: 0; }
+.hotel-item .address { margin-bottom: 0; }
+@media (max-width: 991px) {
+
+}
+@media (max-width: 767px) {
+
 }
 
 /* --- SOCIAL FEED

@@ -11,6 +11,17 @@
     <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/dji-games/images/dji-games-og.jpg">
     <meta name="author" content="DJI">
 
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-43055594-1', 'dji.com');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,6 +44,7 @@
   </head>
 
   <body>
+    {% block nav %}
     <nav class="navbar navbar-fixed-top navbar-default">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,30 +55,29 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'home' %}">
             <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/dji-games-logo.png"/>
           </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#welcome" class="scrollto">Home</a></li>
-            <li><a href="#agenda-glance" class="scrollto">Agenda</a></li>
-            <!--<li class="dropdown">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}#agenda-glance">Agenda</a></li>
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">The Games</a></li>
-                <li><a href="#">The Rules</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="{% url 'hotels' %}">Hotels</a></li>
               </ul>
-            </li>-->
-            <li><a href="#rules" class="scrollto">Rules</a></li>
-            <li><a href="#contact" class="scrollto">Location</a></li>
-            <li><a href="#signup" class="highlighted scrollto">Signup</a></li>
+            </li>
+            <li><a href="{% url 'home' %}#rules">Rules</a></li>
+            <li><a href="{% url 'home' %}#contact">Location</a></li>
+            <li><a href="{% url 'home' %}#signup" class="highlighted">Signup</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    {% endblock nav %}
 
     {% if messages %}
       {% for message in messages %}
