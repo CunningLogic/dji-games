@@ -10,10 +10,10 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     url(r'^games$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
-    url(r'^agenda/$', TemplateView.as_view(template_name='pages/agenda.html'), name="agenda"),
-    url(r'^hotels/$', TemplateView.as_view(template_name='pages/hotels.html'), name="hotels"),
-    url(r'^press/$', TemplateView.as_view(template_name='pages/press.html'), name="press"),
-    url(r'^social/$', TemplateView.as_view(template_name='pages/social.html'), name="social"),
+    url(r'^games/agenda/$', TemplateView.as_view(template_name='pages/agenda.html'), name="agenda"),
+    url(r'^games/hotels/$', TemplateView.as_view(template_name='pages/hotels.html'), name="hotels"),
+    url(r'^games/press/$', TemplateView.as_view(template_name='pages/press.html'), name="press"),
+    url(r'^games/social/$', TemplateView.as_view(template_name='pages/social.html'), name="social"),
 
     # Django Admin
     url(r'^admin/', include(admin.site.urls)),
