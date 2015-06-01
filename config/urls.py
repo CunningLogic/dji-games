@@ -9,21 +9,24 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
-    url(r'^games$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
-    url(r'^games/agenda/$', TemplateView.as_view(template_name='pages/agenda.html'), name="agenda"),
+    url(r'^games/$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
+    url(r'^games/de/$', TemplateView.as_view(template_name='pages/de/home.html'), name="home-de"),
     url(r'^games/hotels/$', TemplateView.as_view(template_name='pages/hotels.html'), name="hotels"),
+    url(r'^games/hotels/de/$', TemplateView.as_view(template_name='pages/de/hotels.html'), name="hotels-de"),
     url(r'^games/press/$', TemplateView.as_view(template_name='pages/press.html'), name="press"),
+    url(r'^games/press/de/$', TemplateView.as_view(template_name='pages/de/press.html'), name="press-de"),
     url(r'^games/social/$', TemplateView.as_view(template_name='pages/social.html'), name="social"),
+    url(r'^games/social/de/$', TemplateView.as_view(template_name='pages/de/social.html'), name="social-de"),
 
     # Django Admin
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^games/admin/', include(admin.site.urls)),
 
     # User management
-    url(r'^users/', include("dji-games.users.urls", namespace="users")),
-    url(r'^accounts/', include('allauth.urls')),
+    url(r'^games/users/', include("dji-games.users.urls", namespace="users")),
+    url(r'^games/accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
-    url(r'^pages/', include("nupages.urls", namespace="nupages")),
+    url(r'^games/pages/', include("nupages.urls", namespace="nupages")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

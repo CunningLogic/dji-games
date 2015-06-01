@@ -153,6 +153,14 @@ button {
   color: #fff;
   background-color: #005995;
 }
+.navbar-language { float: right; }
+.navbar-nav.navbar-language > li > a img { max-height: 25px; }
+.navbar-nav.navbar-language > li > a { padding: 17px 6px; }
+.navbar-default .navbar-nav.navbar-language > li > a:hover,
+.navbar-default .navbar-nav.navbar-language > li > a:focus,
+.navbar-default .navbar-nav.navbar-language > .open > a,
+.navbar-default .navbar-nav.navbar-language > .open > a:focus,
+.navbar-default .navbar-nav.navbar-language > .open > a:hover { background-color: transparent; }
 .navbar-default .dropdown-menu {
   padding: 0;
   border: none;
@@ -182,6 +190,12 @@ button {
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover { background-color: #2b2b2b; }
 .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-default .navbar-nav > li > a {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
 @media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 20px;
@@ -190,6 +204,18 @@ button {
 }
 @media (max-width: 768px) {
   .navbar-default .navbar-brand img { max-height: 30px; }
+  .navbar-language {
+    margin: 0;
+    padding-right: 10px;
+  }
+  .navbar-language > li { float: left; }
+  .navbar-default .navbar-nav.navbar-language > li > a { padding: 12px 6px; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a { color: #fff; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #ccc;
+    background-color: #2b2b2b;
+  }
 }
 
 /* --------------------------------------------- */
@@ -345,6 +371,10 @@ button {
 .signup .form-group {
   padding: 0 5px;
   margin-bottom: 10px;
+}
+.signup .alert-success {
+  margin-top: 15px;
+  position: absolute;
 }
 @media (max-width: 1199px) {
   .signup .dark-overlay { padding: 100px 0 110px; }

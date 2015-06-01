@@ -1,0 +1,314 @@
+{% extends "base-de.html" %}
+{% load staticfiles i18n %}
+
+{% block nav %}
+  <!-- HOME NAV DE
+  ================================================== -->
+  <nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.dji.com">
+          <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/dji-logo.png"/>
+        </a>
+        <!-- Language Options, Mobile -->
+        <ul class="nav navbar-nav navbar-language visible-xs">
+          <li class="language"><a href="{% url 'home' %}">
+            <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/english.png">
+          </a></li>
+          <li class="language"><a href="{% url 'home-de' %}">
+            <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/german.png">
+          </a></li>
+        </ul><!-- /.navbar-languages-->
+      </div>
+      <!-- Language Options -->
+      <ul class="nav navbar-nav navbar-language hidden-xs">
+        <li class="language"><a href="{% url 'home' %}">
+          <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/english.png">
+        </a></li>
+        <li class="language"><a href="{% url 'home-de' %}">
+          <img src="https://s3-us-west-2.amazonaws.com/dji-games/images/german.png">
+        </a></li>
+      </ul><!-- /.navbar-languages-->
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#welcome" class="scrollto">Home</a></li>
+          <li><a href="#agenda-glance" class="scrollto">Programm</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Über <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{% url 'hotels-de' %}">Hotels</a></li>
+              <li><a href="{% url 'press-de' %}">Presse</a></li>
+            </ul>
+          </li>
+          <li><a href="#rules" class="scrollto">Reglement</a></li>
+          <li><a href="#contact" class="scrollto">Location</a></li>
+          <li><a href="#signup" class="highlighted scrollto">Anmeldung</a></li>
+        </ul><!-- /.navbar-right-->
+      </div><!-- /.navbar-collapse-->
+    </div><!-- /.container-fluid-->
+  </nav>
+  <!--/ HOME NAV DE
+  ================================================== -->
+{% endblock nav %}
+
+{% block content %}
+  <!-- WELCOME
+  ================================================== -->
+  <section class="welcome" id="welcome">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-sm-8">
+          <!-- 16:9 iframe embed -->
+          <div class="embed-responsive embed-responsive-16by9 video-embed video-embed-item">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Jvvx-Uo-YRc" frameborder="0" allowfullscreen></iframe>
+          </div><!--/ .embed-responsive-->
+          <h1 class="title">Spitzerberg, Österreich <span>20-21 Juni 2015</span></h1>
+        </div><!--/ .col-md-7-->
+      </div><!--/ .row-->
+    </div><!--/ .container-->
+  </section>
+  <!--/ WELCOME
+  ================================================== -->
+
+  <!-- OVERVIEW
+  ================================================== -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Wir suchen die besten Phantom Piloten der Welt!</h2>
+        </div>
+        <div class="col-sm-8 section-title">
+          <h3 style="font-weight: 300; line-height: 1.3;">Mache mit beim weltweit ersten Wettbewerb für Kopter- bzw. Drohnen-Piloten. Auf dem einzigartigen Hindernisparcours in der Nähe von Wien zeigst Du der ganzen Welt Deine Flugfähigkeiten und hast die Chance, exklusive Preise von DJI zu gewinnen. Hunderte von abflugbereiten Phantoms warten auf Dich. Jetzt anmelden.</h3>
+        </div><!--/ .col-xs-12-->
+        <div class="col-sm-3 col-xs-10">
+          <a href="#signup" class="btn btn-lg btn-block btn-danger btn-signup scrollto">Jetzt anmelden</a>
+        </div>
+      </div><!--/ .row-->
+    </div><!--/ .container-->
+  </section>
+  <!--/ OVERVIEW
+  ================================================== -->
+
+  <!-- AGENDA AT-A-GLANCE
+  ================================================== -->
+  <section class="agenda-glance" id="agenda-glance">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 section-title-2 text-center">
+          <h2>Programm & Tagesablauf</h2>
+        </div><!--/ .col-xs-12-->
+      </div><!--/ .row-->
+      <div role="tabpanel">
+        <div class="row event-days">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-6 active" role="presentation">
+              <a href="#day1" aria-controls="day1" role="tab" data-toggle="tab" class="btn btn-lg btn-block">Samstag</a>
+            </li><!--/ .col-md-3-->
+            <li class="col-md-3 col-sm-4 col-xs-6" role="presentation">
+              <a href="#day2" aria-controls="day2" role="tab" data-toggle="tab" class="btn btn-lg btn-block">Sonntag</a>
+            </li><!--/ .col-md-3-->
+          </ul><!--/ .nav-tabs-->
+        </div><!--/ .event-days-->
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="day1">
+            <div class="row">
+              <div class="col-xs-6 time-item"><p>8:00 - 8:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Piloten-Briefing</p></div>
+              <div class="col-xs-6 time-item"><p>9:00 - 9:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>10:00 - 10:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (AGP)</p></div>
+              <div class="col-xs-6 time-item"><p>11:00 - 11:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Eröffnungsveranstaltung</p></div>
+              <div class="col-xs-6 time-item"><p>12:00 - 14:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Qualifikationsrunden (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>14:30 - 14:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Qualifikationsrunden (AGP)</p></div>
+              <div class="col-xs-6 time-item"><p>16:45 - 17:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Ankündigungen</p></div>
+              <div class="col-xs-6 time-item"><p>17:00 - 17:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>18:00 - 20:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (AGP)</p></div>
+            </div><!--/ .row-->
+          </div><!--/ .tab-panel-->
+          <div role="tabpanel" class="tab-pane fade" id="day2">
+            <div class="row">
+              <div class="col-xs-6 time-item"><p>8:00 - 8:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Piloten-Briefing</p></div>
+              <div class="col-xs-6 time-item"><p>9:00 - 10:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Halbfinale (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>10:30 - 11:30 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Halbfinale (AGP)</p></div>
+              <div class="col-xs-6 time-item"><p>12:00 - 14:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Ankündigungen & Halbzeit-Show</p></div>
+              <div class="col-xs-6 time-item"><p>14:15 - 14:45 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>15:00 - 15:30 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Freies Training (AGP)</p></div>
+              <div class="col-xs-6 time-item"><p>16:00 - 17:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Finale (AGP)</p></div>
+              <div class="col-xs-6 time-item"><p>17:30 - 18:30 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Finale (DJI Games)</p></div>
+              <div class="col-xs-6 time-item"><p>18:45 - 20:00 UHR</p></div>
+                <div class="col-xs-6 event-item"><p>Siegerverkündung & Abschlussfeier</p></div>
+            </div><!--/ .row-->
+          </div><!--/ .tab-panel-->
+        </div><!--/ .tab-content-->
+      </div>
+    </div><!--/ .container-->
+  </section>
+  <!--/ AGENDA AT-A-GLANCE
+  ================================================== -->
+
+  <!-- GAME RULES
+  ================================================== -->
+  <section class="rules" id="rules">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 section-title-2 text-center">
+          <h2>Reglement</h2>
+        </div><!--/ .col-xs-12-->
+      </div><!--/ .row-->
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Allgemeiner Ablauf</h3>
+          <p>Zum Einsatz kommt bei allen Teilnehmern der Phantom 3, der vor Ort von DJI bereitgestellt wird. Auf dem einzigartigen „Free-Fly“-Hindernisparcours entscheiden Geschicklichkeit, Kreativität und Schnelligkeit (2-Minuten Zeitlimit) in Form eines Punktesystems über den Sieg bei den DJI Games.</p>
+          <div class="tabbed">
+            <h4><strong>Tag 1: Qualifikationsrunden</strong></h4>
+            <p>Während den Qualifikationsrunden fliegt jeder Teilnehmer alleine, um seine individuellen Flugfähigkeiten zu demonstrieren.</p>
+            <p><em>6 Teilnehmer pro Runde</em></p>
+            <h4><strong>Tag 2: Halbfinale</strong></h4>
+            <p>Im Halbfinale werden die Teamfähigkeiten der Teilnehmer getestet. Hierfür werden die Drohnenpiloten in zufällig festgelegten Paarungen gegeneinander gestellt.</p>
+            <p><em>2 Teilnehmer pro Team, 3 Teams pro Runde</em></p>
+            <h4><strong>Tag 2: Finale</strong></h4>
+            <p>Im Finale werden die Teilnehmer erneut in zufällig festgelegte Paarungen aufgeteilt. Außerdem erhalten die Teams zusätzliche Trainingszeit und die Teammitglieder können  sich im Vorfeld der Finalrunden aufeinander abstimmen.</p>
+            <p><em>2 Teilnehmer pro Team, 3 Teams pro Runde</em></p>
+          </div><!--/ .tabbed-->
+          <h3>Parcours und Punktesystem</h3>
+          <p>Der einzigartige Hindernisparcours von DJI sieht verschiedene Arten von Punktevergaben vor. Die Manöver und Hindernisse können von allen Teilnehmern in beliebiger Reihenfolge gemeistert werden und für jeden Teilnehmer ist ein eigener Parcours vorgesehen.</p>
+          <div class="row list-item">
+            <div class="col-sm-4 col-sm-push-8 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/pyramid.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-8 col-sm-pull-4">
+              <h4><strong>DJI Pyramide | 10-20 Punkte</strong></h4>
+              <p>Nutze das Fahrgestell des DJI Phantoms, um die DJI Pyramide aufzusammeln und sie dann auf das vorgesehene Ziel abzulegen. Die Genauigkeit entscheidet über die Punktevergabe: hier gibt es 10, 15, oder 20 Punkte.</p>
+              <p><em>Jeder Teilnehmer hat pro Runde nur einen Versuch.</em></p>
+            </div>
+          </div><!--/ .list-item-->
+          <div class="row list-item">
+            <div class="col-sm-3 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/landing-pad.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-9">
+              <h4><strong>Landeplätze | 2-5 Punkte</strong></h4>
+              <p>Lande Dein Phantom auf verschiedenen Landeplätzen und bleibe für jeweils 1 Sekunde am Boden. Je nachdem wie präzise Du Deinen Phantom landest, gibt es hier 5 Punkte im vorgesehenen Zentrum und 2 Punkte am Rand.</p>
+              <p><em>Jeder Teilnehmer hat pro Runde nur einen Versuch.</em></p>
+            </div>
+          </div><!--/ .list-item-->
+          <div class="row list-item">
+            <div class="col-sm-4 col-sm-push-8 col-xs-8">
+              <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/dji-games/images/figure-8.png"/>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-8 col-sm-pull-4">
+              <h4><strong>Achterflug | 4 Punkte</strong></h4>
+              <p>Meistere so oft wie möglich eine Achterbewegung um die zwei Pfeiler in der Mitte des Parcours. Jeder absolvierte Achterflug gibt 4 Punkte.</p>
+              <p><em>Achterflüge können pro Runde beliebig oft wiederholt werden. </em></p>
+              <h4 style="margin-top: 20px;"><strong>Loops | 2 Punkte</strong></h4>
+              <p>Fliege durch die Öffnungen („Loops“) an jedem Pfeiler, um jeweils 2 Punkte einzusammeln.</p>
+              <p><em>Jeder Teilnehmer hat pro Runde nur zwei Versuche.</em></p>
+            </div>
+          </div><!--/ .list-item-->
+          <h3 style="margin-top: 30px;">Zeitlimit</h3>
+          <p>Alle oben genannten Manöver und Hindernisse müssen innerhalb einer vorgegebenen Zeit absolviert werden, um die jeweiligen Punkte zu erhalten. Die Zeitlimits variieren je nach Runde.</p>
+          <h3>Strafpunkte</h3>
+          <p>Um sicheres Fliegen und das Einhalten der Vorschriften sicher zu stellen, können Strafpunkte vergeben werden:</p>
+          <div class="tabbed">
+            <h4><strong>Absturz | -15 Punkte, Rundenabbruch</strong></h4>
+            <p>Eine Flugfunktionsunfähigkeit durch den Absturz des Kopters auf den Boden oder in andere Objekte zieht einen unmittelbaren Abbruch des Flugversuches nach sich. Außerdem werden dem Teilnehmer 15 Punkte von seinem aktuellen Punktestand abgezogen und es können keine weiteren Punkte innerhalb der aktuellen Runde gesammelt werden.</p>
+            <h4><strong>Außerhalb des Flugbereichs | -10 Punkte, Rundenabbruch</strong></h4>
+            <p>Sollte ein Kopter außerhalb des vorgegebenen Bereichs fliegen oder in den Parcours eines anderen Teilnehmers hineinfliegen, bedeutet dies den sofortigen Abbruch des Flugversuches. Außerdem werden dem Teilnehmer 15 Punkte von seinem aktuellen Punktestand abgezogen und es können keine weiteren Punkte innerhalb der aktuellen Runde gesammelt werden.</p>
+            <h4><strong>Gescheiterte Landung | -10 Punkte</strong></h4>
+            <p>Nach Ablauf des Zeitlimits müssen alle Teilnehmer ihren Kopter sicher auf dem Boden und innerhalb des jeweiligen Parcours landen. Anschließend müssen die Motoren innerhalb von 15 Sekunden ausgeschaltet sein. Ein gescheiterter Landeversuch resultiert in einem Abzug von 10 Punkten vom aktuellen Punktestand.</p>
+            <h4><strong>Disqualifikation</strong></h4>
+            <p>Bei unsportlichem und unangemessenem Verhalten wird der Teilnehmer unmittelbar vom weiteren Wettbewerbsverlauf und von zukünftigen DJI Games ausgeschlossen. Alle Entscheidungen liegen im Ermessensspielraum der Veranstaltungsleitung vor Ort.</p>
+          </div><!--/ .tabbed-->
+        </div>
+      </div><!--/ .row-->
+    </div><!--/ .container-->
+  </section>
+  <!--/ GAME RULES
+  ================================================== -->
+
+  <!-- SIGNUP
+  ================================================== -->
+  <section class="signup" id="signup">
+    <div class="dark-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 section-title">
+            <h2>Die Teilnehmeranzahl ist begrenzt.<br>
+            Melde Dich noch heute an.</h2>
+          </div><!--/ .col-xs-12-->
+        </div><!--/ .row-->
+          <!-- --- SIGNUP FORM --- -->
+            {% include "forms/signup-form-de.html" %}
+          <!-- ---/ SIGNUP FORM --- -->
+      </div><!--/ .container-->
+    </div><!--/ .dark-overlay-->
+  </section>
+  <!--/ SIGNUP
+  ================================================== -->
+
+  <!-- CONTACT
+  ================================================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="section-title-2">
+            <h2>Location & Kontakt</h2>
+          </div>
+          <div class="col-md-4"><p class="contact-item">Primäre E-Mail:</p></div>
+          <div class="col-md-8">
+            <p><a href="mailto:games@dji.com">games@dji.com</a></p>
+          </div>
+          <div class="col-md-4"><p class="contact-item">Adresse der Location:</p></div>
+          <div class="col-md-8">
+            <p>Flugplatz Spitzerberg<br>
+            Spitzerberg 1<br>
+            2405 Hundsheim<br>
+            Österreich</p>
+          </div>
+          <div class="col-md-4"><p class="contact-item">AGP E-Mail:</p></div>
+          <div class="col-md-8">
+            <p><a href="mailto:aerialgp@gmail.com">aerialgp@gmail.com</a></p>
+          </div>
+        </div><!--/ .col-md-6-->
+        <div class="col-sm-6">
+          <!-- 16:9 iframe embed -->
+          <div class="embed-responsive embed-responsive-16by9 map-embed-item">
+            <iframe class="embed-responsive-item" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Spitzerberg%201%202405%20Hundsheim%2C%20Austria&key=AIzaSyBp1MgLfTuunv4Ntba3G_oaPxawTu06oUA"></iframe>
+          </div><!--/ .embed-responsive-->
+        </div><!--/ .col-md-6-->
+      </div><!--/ .row-->
+    </div><!--/ .container-->
+  </section>
+  <!--/ CONTACT
+  ================================================== -->
+{% endblock content %}
