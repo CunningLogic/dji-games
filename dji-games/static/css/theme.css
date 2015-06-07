@@ -417,27 +417,36 @@ button {
 /* --- HOTELS
 /* --------------------------------------- */
 .hotels { padding: 60px 0; }
-.hotel-item {
+.travel-item {
   padding: 20px;
   display: block;
   border: 1px solid #ddd;
   border-radius: 3px;
   font-size: 12px;
   margin-bottom: 16px;
+  background-color: #fff;
+  min-height: 120px;
 }
-.hotel-thumb {
+.travel-thumb {
   float: left;
   padding-right: 20px;
   max-width: 100px;
 }
-.hotel-title { margin-top: 0; }
-.hotel-item .address { margin-bottom: 0; }
+.travel-title { margin-top: 0; }
+.travel-item .address { margin-bottom: 0; }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .hotel-item { min-height: 140px; }
+  .travel-item { min-height: 140px; }
 }
 @media (max-width: 991px) {
 }
 @media (max-width: 767px) {
+}
+
+/* --- CAR RENTALS
+/* --------------------------------------- */
+.car-rental {
+  padding: 60px 0;
+  background-color: #f9f9f9;
 }
 
 /* --- PRESS
