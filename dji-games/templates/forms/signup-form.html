@@ -1,8 +1,8 @@
-<form name="ProfileForm" onsubmit="return CheckInputs();" action="http://link.dji.com/u/register.php" method="get">
+<form name="ProfileForm" onsubmit="return CheckInputs();" action="http://link.dji.com/u/register.php" method=get>
   <input type="hidden" name="CID" value="290636680">
   <input type="hidden" name="SID" value="">
   <input type="hidden" name="UID" value="">
-  <input type="hidden" name="f" value="2403">
+  <input type="hidden" name="f" value="2494">
   <input type="hidden" name="p" value="2">
   <input type="hidden" name="a" value="r">
   <input type="hidden" name="el" value="">
@@ -245,6 +245,15 @@
     <div class="form-group col-lg-4 col-sm-6">
       <input type="text" class="form-control" maxlength="255" name="inp_49686" value="" placeholder="Current Aerial System...">
     </div><!--/ .form-group-->
+  </div><!--/ .row-->
+  <div class="row">
+    <div class="form-group col-lg-4 col-sm-6">
+      <select class="form-control" name="inp_50988[]">
+        <option value="">Choose Event Location</option>
+        <option value="1">Spitzerberg, Austria (June 20, 2015)</option>
+        <option value="2">San Francisco, USA (June 25, 2015)</option>
+      </select>
+    </div><!--/ .form-group-->
     <div class="clearfix"></div>
     <div class="col-lg-2 col-sm-3">
       <input type="button" class="btn btn-block btn-primary" onclick="javascript:SubmitIt()" name="submit1" value="Signup">
@@ -259,57 +268,57 @@
   //-->
 </script>
 <script language="javascript">
-  <!--
-    var error;
-    var form_lanuage = 'en';
-    function is_1_valid(input) {
-      if(input == "") {
-        error += "First Name: missing data!\n";
-        return false;
-      }
-      return true;
+<!--
+  var error;
+  var form_lanuage = 'en';
+  function is_1_valid(input) {
+    if(input == "") {
+      error += "First Name: missing data!\n";
+      return false;
     }
-    function is_2_valid(input) {
-      if(input == "") {
-        error += "Last Name: missing data!\n";
-        return false;
-      }
-      return true;
+    return true;
+  }
+  function is_2_valid(input) {
+    if(input == "") {
+      error += "Last Name: missing data!\n";
+      return false;
     }
-    function is_11_valid(input) {
-      if(input == "") {
-        error += "City: missing data!\n";
-        return false;
-      }
-      return true;
+    return true;
+  }
+  function is_11_valid(input) {
+    if(input == "") {
+      error += "City: missing data!\n";
+      return false;
     }
-    function is_14_valid(input) {
-      if(input == "") {
-        error += "Country: missing data!\n";
-        return false;
-      }
-      return true;
+    return true;
+  }
+  function is_14_valid(input) {
+    if(input == "") {
+      error += "Country: missing data!\n";
+      return false;
     }
-    function is_3_valid(input) {
-      if(input == "") {
-        error += "E-Mail: missing data!\n";
-        return false;
-      }
-      return true;
+    return true;
+  }
+  function is_3_valid(input) {
+    if(input == "") {
+      error += "E-Mail: missing data!\n";
+      return false;
     }
-    function CheckInputs() {
-      var check_ok = true;
-      error = "Wrong input!\n";
-      check_ok = (is_1_valid(document.ProfileForm.inp_1.value) && check_ok);
-      check_ok = (is_2_valid(document.ProfileForm.inp_2.value) && check_ok);
-      check_ok = (is_11_valid(document.ProfileForm.inp_11.value) && check_ok);
-      check_ok = (is_14_valid(document.ProfileForm.inp_14.options[document.ProfileForm.inp_14.selectedIndex].value) && check_ok);
-      check_ok = (is_3_valid(document.ProfileForm.inp_3.value) && check_ok);
-      if(check_ok == false)
-      alert(error);
-      return check_ok;
-    }
-  //-->
+    return true;
+  }
+  function CheckInputs() {
+    var check_ok = true;
+    error = "Wrong input!\n";
+    check_ok = (is_1_valid(document.ProfileForm.inp_1.value) && check_ok);
+    check_ok = (is_2_valid(document.ProfileForm.inp_2.value) && check_ok);
+    check_ok = (is_11_valid(document.ProfileForm.inp_11.value) && check_ok);
+    check_ok = (is_14_valid(document.ProfileForm.inp_14.options[document.ProfileForm.inp_14.selectedIndex].value) && check_ok);
+    check_ok = (is_3_valid(document.ProfileForm.inp_3.value) && check_ok);
+    if(check_ok == false)
+    alert(error);
+    return check_ok;
+  }
+//-->
 </script>
 <script language="javascript">
   function SubmitIt() {
@@ -329,7 +338,7 @@
   }
   function FieldWithName(frm, fieldname, numofield) {
     if(!numofield)
-        numofield = 0;
+    numofield = 0;
     field_count = 0;
     for(i = 0; i < frm.elements.length; ++i) {
       if(frm.elements[i].name == fieldname) {
@@ -361,5 +370,9 @@
   multiFields["interest[]"] = "interest"
   multiFields["optin"] = "optin"
   var arr_interest = new Array();
+  multiFields["inp_50988[]"]=50988;
+  arr_50988 = new Array();
+  arr_50988["Spitzerberg, Austria (June 20, 2015)"] = "1";
+  arr_50988["San Francisco, USA (June 25, 2015)"] = "2";
 </script>
 <script language="javascript" src="https://link.dji.com/u/nprefill.js" type="text/javascript"></script>

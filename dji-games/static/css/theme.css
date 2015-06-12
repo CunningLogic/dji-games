@@ -266,6 +266,55 @@ button {
   .welcome .title span { font-size: 24px; }
 }
 
+/* --- HOMEPAGE, San Francisco
+/* --------------------------------------- */
+.sanfran {
+  padding: 135px 0;
+  background: #fff url(https://s3-us-west-2.amazonaws.com/dji-games/images/uss-hornet.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+.sanfran .section-title h1,
+.sanfran .section-title h2 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.sanfran .section-title h1 {
+  margin-top: 20px;
+  font-size: 64px; 
+  text-shadow: 2px 3px 8px rgba(0,0,0,1);
+  font-weight: 700;
+}
+.sanfran .section-title h2 {
+  margin-top: 12px;
+  font-weight: 600;
+  text-shadow: 1px 2px 4px rgba(0,0,0,1);
+}
+.sanfran .logos {
+  padding: 20px 0;
+  background: -webkit-linear-gradient(90deg, transparent 1%, rgba(34,34,34,0.8) 10%, rgba(34,34,34,0.8) 90%, transparent 99%);
+  background: -o-linear-gradient(90deg, transparent 1%, rgba(34,34,34,0.8) 10%, rgba(34,34,34,0.8) 90%, transparent 99%);
+  background: -moz-linear-gradient(90deg, transparent 1%, rgba(34,34,34,0.8) 10%, rgba(34,34,34,0.8) 90%, transparent 99%);
+  background: linear-gradient(90deg, transparent 1%, rgba(34,34,34,0.8) 10%, rgba(34,34,34,0.8) 90%, transparent 99%);
+}
+@media (max-width: 1199px) {
+  .sanfran { padding: 100px 0; }
+}
+@media (max-width: 991px) {
+  .sanfran { padding: 80px 0; }
+  .sanfran .section-title h1 { font-size: 52px; }
+}
+@media (max-width: 767px) {
+  .sanfran .section-title h1 { font-size: 42px; }
+  .sanfran .section-title h2 { font-size: 24px; }
+  .nutanix { margin-top: 15px; }
+  .sanfran .logos {
+    padding: 20px 0 15px;
+    background: rgba(34,34,34,0.8);
+  }
+}
+
 /* --- HOMEPAGE, Overview
 /* --------------------------------------- */
 .overview { padding: 50px 0; }
@@ -364,7 +413,7 @@ button {
 }
 .signup .dark-overlay {
   background-color: rgba(0,0,0,0.07);
-  padding: 120px 0 140px;
+  padding: 100px 0 120px;
 }
 .signup .section-title,
 .signup .btn { margin-left: -10px; }
@@ -377,7 +426,7 @@ button {
   position: absolute;
 }
 @media (max-width: 1199px) {
-  .signup .dark-overlay { padding: 100px 0 110px; }
+  .signup .dark-overlay { padding: 80px 0 90px; }
 }
 @media (max-width: 991px) {
   .signup .dark-overlay { padding: 50px 0 60px; }
